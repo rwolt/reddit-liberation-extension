@@ -1,7 +1,9 @@
 chrome.storage.sync.get(["userData"], function (result) {
   whiteList = [];
   blackList = [];
-  userInterfaceOptions = {};
+  userInterfaceOptions = {
+    showSideBar: false,
+  };
   if (result.userData != undefined) {
     whiteList = result.userData.whiteList;
     blackList = result.userData.blackList;

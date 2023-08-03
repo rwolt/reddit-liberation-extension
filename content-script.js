@@ -13,11 +13,23 @@ function deleteCommentAndLogo() {
 chrome.storage.sync.get(["userData"], function (result) {
   whiteList = [];
   blackList = [];
-  showSideBar = true;
+  userInterfaceOptions = {
+    showSideBar: true,
+  };
   if (result.userData != undefined) {
     whiteList = result.userData.whiteList;
     blackList = result.userData.blackList;
-    showSideBar = result.userDaa.showSideBar;
+    userInterfaceOptions = result.userData.userInterfaceOptions;
+  }
+
+  const hideSideBar = () => {
+    console.log("hide sidebar");
+    const sideBar = document.querySelector("reddit-sidebar-nav");
+    sideBar.style.display = "none";
+  };
+
+  if (userInterfaceOptions.showSideBar === false) {
+    hideSideBar();
   }
 
   pathName = window.location.pathname;
