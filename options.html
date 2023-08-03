@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Options</title>
-    <link rel="stylesheet" href="options.css">
-</head>
-<body>
-
-<div id="lists">
-    <h1>Reddit Liberation Extension</h1>
-    <div id="white">
-        <h2>Whitelist: subreddits that you would like to view (intended for productivity purposes)</h2>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <div id="lists">
+      <h1>Reddit Liberation Extension</h1>
+      <div id="white">
+        <h2>
+          Whitelist: subreddits that you would like to view (intended for
+          productivity purposes)
+        </h2>
         <div id="whiteList">
-            <div>
-                <input type="text" id="addWhiteList" name="addWhiteList">
-                <button id="addWhiteListButton">Add</button>
-                (do not include "/r/", for example: learnprogramming)
-            </div>
-            <!-- There will be generated buttons here -->
+          <div>
+            <input type="text" id="addWhiteList" name="addWhiteList" />
+            <button id="addWhiteListButton">Add</button>
+            (do not include "/r/", for example: learnprogramming)
+          </div>
+          <!-- There will be generated buttons here -->
         </div>
-    </div>
+      </div>
 
-    <div style="height:50px"></div>
+      <div style="height: 50px"></div>
 
-    <div id="black">
-        <h2>Blacklist: subreddits that you would like to block the comments of (if you keep ending wasting time in their comments sections)</h2>
+      <div id="black">
+        <h2>
+          Blacklist: subreddits that you would like to block the comments of (if
+          you keep ending wasting time in their comments sections)
+        </h2>
         <div id="blackList">
-            <div>
-                <input type="text" id="addBlackList" name="addBlackList">
-                <button id="addBlackListButton">Add</button>
-                (do not include "/r/", for example: askreddit)
-            </div>
-            <!-- There will be generated buttons here -->
+          <div>
+            <input type="text" id="addBlackList" name="addBlackList" />
+            <button id="addBlackListButton">Add</button>
+            (do not include "/r/", for example: askreddit)
+          </div>
+          <!-- There will be generated buttons here -->
         </div>
-    </div>
+      </div>
 
-    <div style="height:50px"></div>
-</div>
-<script src="options.js"></script>
-</body>
+      <div style="height: 50px"></div>
+    </div>
+    <div id="ui-options">
+      <label for="showSideBar">Show Sidebar</label>
+      <input
+        class="ui-option"
+        type="checkbox"
+        id="showSideBar"
+        name="showSideBar"
+      />
+    </div>
+    <script src="options.js"></script>
+  </body>
 </html>
